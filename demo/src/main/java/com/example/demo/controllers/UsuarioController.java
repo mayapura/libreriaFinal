@@ -25,11 +25,11 @@ public class UsuarioController {
     public Optional<UsuarioModel> obtenerUsuarioPorId(@PathVariable("id") Long id) {
         return this.usuarioService.obtenerPorId(id);
     }
-    @CrossOrigin
+/*     @CrossOrigin
     @GetMapping("/query")
     public ArrayList<UsuarioModel> obtenerUsuarioPorPrioridad(@RequestParam("prioridad") Integer prioridad){
         return this.usuarioService.obtenerPorPrioridad(prioridad);
-    }
+    } */
     @CrossOrigin
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id){

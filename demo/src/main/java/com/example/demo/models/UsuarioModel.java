@@ -13,39 +13,77 @@ public class UsuarioModel {
 
     private Long id;
     private String nombre;
-    private String imagen;
+    private String apellido;
+    private Integer dni;
     private String email;
-    private Integer prioridad;
+    private Integer telefono;
+    private String asunto;
+    private String mensaje;
 
-    public void setPrioridad(Integer prioridad){
-        this.prioridad = prioridad;
-    }
-    public Integer getPrioridad(){
-        return prioridad;
-    }
-    public void setImagen(String imagen){
-        this.imagen = imagen;
-    }
-    public String getImagen(){
-        return imagen;
-    }
+
     public Long getId() {
-        return id;
+        return this.id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getEmail() {
-        return email;
+
+    public String getApellido() {
+        return this.apellido;
     }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public Integer getDni() {
+        return this.dni;
+    }
+
+    public void setDni(Integer dni) {
+        this.dni = dni;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Integer getTelefono() {
+        return this.telefono;
+    }
+
+    public void setTelefono(Integer telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getAsunto() {
+        return this.asunto;
+    }
+
+    public void setAsunto(String asunto) {
+        this.asunto = asunto;
+    }
+
+    public String getMensaje() {
+        return this.mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+
 
 }

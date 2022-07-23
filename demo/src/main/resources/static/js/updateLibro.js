@@ -7,10 +7,15 @@ for (let i = 0; i < args.length; ++i) {
     console.log(parts[i])
 }
 
+var esp = /%20/gi;
+/* var ñ = /%C3%B1/gi;
+var ac = /%C3%A1/gi;
+var ic = /%C3%AD/gi; */
+
 document.getElementById("txtId").value = parts[0][1]
-document.getElementById("txtTitulo").value = parts[1][1]
-document.getElementById("txtAutor").value = parts[2][1]
-document.getElementById("txtDescripcion").value = parts[3][1]
+document.getElementById("txtTitulo").value = parts[1][1].replace(esp, " ");
+document.getElementById("txtAutor").value = parts[2][1].replace(esp, " ")
+document.getElementById("txtDescripcion").value = parts[3][1].replace(esp, " ");
 document.getElementById("txtImagen").value = parts[4][1]
 document.getElementById("txtStock").value = parts[5][1]
 document.getElementById("txtPrecio").value = parts[6][1]
@@ -37,7 +42,7 @@ function modificar() {
         destacado: des
     }
 
-    let url = "http://localhost:8080/libros"
+    let url = "http://localhost:8080/libros/"
 
     var options = {
         body: JSON.stringify(libro),

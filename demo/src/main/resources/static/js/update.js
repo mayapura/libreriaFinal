@@ -21,22 +21,31 @@ for (let i = 0; i < args.length; ++i) {
 
 document.getElementById("txtId").value = parts[0][1]
 document.getElementById("txtNombre").value = parts[1][1]
-document.getElementById("txtEmail").value = parts[2][1]
-document.getElementById("txtPrioridad").value = parts[3][1]
-document.getElementById("txtImagen").value = parts[4][1]
+document.getElementById("textApellido").value = parts[2][1]
+document.getElementById("txtDni").value = parts[3][1]
+document.getElementById("textEmail").value = parts[4][1]
+document.getElementById("textTelefono").value = parts[5][1]
+document.getElementById("textAsunto").value = parts[6][1]
+document.getElementById("txtMensaje").value = parts[7][1]
 
 function modificar() {
-    let i = document.getElementById("txtId").value
+
     let n = document.getElementById("txtNombre").value
-    let e = document.getElementById("txtEmail").value
-    let p = parseInt(document.getElementById("txtPrioridad").value)
-    let im = parseInt(document.getElementById("txtImagen").value)
+    let a = document.getElementById("textApellido").value
+    let d = parseInt(document.getElementById("txtDni").value)
+    let e = document.getElementById("textEmail").value
+    let p = parseInt(document.getElementById("textTelefono").value)
+    let as = document.getElementById("textAsunto").value
+    let m = document.getElementById("txtMensaje").value
+
     let usuario = {
-        id: i,
         nombre: n,
+        apellido: a,
+        dni: d,
         email: e,
-        prioridad: p,
-        imagen: im
+        telefono: p,
+        asunto: as,
+        mensaje: m
     }
     let url = "http://localhost:8080/usuarios"
     var options = {

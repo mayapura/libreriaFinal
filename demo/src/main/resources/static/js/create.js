@@ -1,17 +1,25 @@
-function guardar() {
+function enviarmje() {
 
     let n = document.getElementById("txtNombre").value
+    let a = document.getElementById("txtApellido").value
+    let d = parseInt(document.getElementById("txtDni").value)
     let e = document.getElementById("txtEmail").value
-    let p = parseInt(document.getElementById("txtPrioridad").value)
-    let im = document.getElementById("txtImagen").value
+    let p = parseInt(document.getElementById("txtTelefono").value)
+    let as = document.getElementById("txtAsunto").value
+    let m = document.getElementById("txtMensaje").value
 
     let usuario = {
         nombre: n,
+        apellido: a,
+        dni: d,
         email: e,
-        prioridad: p,
-        imagen: im
+        telefono: p,
+        asunto: as,
+        mensaje: m
     }
+
     let url = "http://localhost:8080/usuarios"
+
     var options = {
         body: JSON.stringify(usuario),
         method: 'POST',
@@ -20,14 +28,14 @@ function guardar() {
     }
     fetch(url, options)
         .then(function() {
-            console.log("creado")
-            alert("Grabado")
+            console.log("enviado")
+            alert("Mensaje enviado")
 
             // Handle response we get from the API
         })
         .catch(err => {
             //this.errored = true
-            alert("Error al grabar")
+            alert("Error al enviar el mensaje")
             console.error(err);
         })
 }
