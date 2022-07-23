@@ -55,15 +55,15 @@
                         <div class="col-md-4 mx-auto my-auto">
                             <img :src="libro.imagen" :alt="libro.titulo" class="img-fluid rounded-start">
                         </div>
-                        <div class="col-md-8 text-start">
-                            <div class="card-body px-5">
+                        <div class="col-md-8 text-start my-auto">
+                            <div class="card-body px-5 ">
                                 <h5 class="card-title">{{libro.titulo}}</h5>
                                 <p>Autor: {{libro.autor}} </p>
                                 <p>Stock: {{libro.stock}}</p>
-                                <p>Precio: {{libro.precio}}</p>
+                                <p>Precio: $ {{libro.precio}}</p>
                                 <p>Descripción:</p>
                                 <p class="card-text">{{libro.descripcion}}</p>
-                                <p>Destacado: {{libro.destacado}}</p>
+                                <!-- <p>Destacado: {{libro.destacado}}</p> -->
                                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Comprar</a>
                             </div>
                         </div>
@@ -72,13 +72,14 @@
                 </div>
             </div>
         </div>
+        <footer class="row mx-0 px-0 " id="footer ">
+            <div class="col-sm-12 m-auto p-auto bg-dark ">
+                <h6 class="bg-dark text-white text-center py-4 ">Copyright &copy; 2022 Programaci&oacute;n FullStack con Java</h6>
+            </div>
+        </footer>
 
     </div>
-    <footer class="row mx-0 px-0 " id="footer ">
-        <div class="col-sm-12 m-auto p-auto bg-dark ">
-            <h6 class="bg-dark text-white text-center py-4 ">Copyright &copy; 2022 Programaci&oacute;n FullStack con Java</h6>
-        </div>
-    </footer>
+
 
 
     <!-- Bootstrap Bundle with Popper -->
