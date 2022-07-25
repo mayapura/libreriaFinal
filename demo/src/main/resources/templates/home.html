@@ -71,21 +71,21 @@
                 </div>
             </div>
 
-            <div class="">
+            <div class=" ">
                 <div class="text-center mt-3 mb-4 col-12">
                     <h2 class="fw-bold">Libros Disponibles</h2>
                 </div>
                 <div class="row py-4 mb-5" style="background-color: rgba(197, 216, 216, 0.5);">
-                    <div id="app" class="col-lg-9 col-md-8 col-sm-12 mb-4">
+                    <div id="app" class="col-lg-9 col-md-8 col-sm-12 mb-4 ">
                         <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 g-4">
-                            <div class="col-9 mx-auto" v-for="libro in libros">
+                            <div class="col-sm-12" v-for="libro in libros">
                                 <div class="card h-100">
                                     <div class="p-3 pb-0  mx-auto">
                                         <img :src="libro.imagen" :alt="libro.nombre" class="card-img-top" style="max-height: 20rem;">
                                     </div>
                                     <div class="card-body">
                                         <p class="card-title">{{libro.titulo}}</p>
-                                        <p class="text-secondary">Titulo: {{libro.autor}}</p>
+                                        <p class="text-secondary">Autor: {{libro.autor}}</p>
                                         <p class="fw-bold">${{libro.precio}}</p>
                                     </div>
                                     <div class="card-footer">
@@ -102,34 +102,35 @@
                         <div class="text-center col-12 bg-dark text-white mb-2 mx-auto">
                             <h5 class="col-12 bg-danger py-2">Destacados</h5>
                             <br>
-                            <div class="d-flex row">
-                                <div class="flex-shrink-0 col-lg-6 col-md-12 col-sm-5 px-0">
-                                    <img src="https://contentv2.tap-commerce.com/cover/large/9789876848039_1.jpg?id_com=1113" alt="..." style="max-height: 10rem;">
-                                </div>
-                                <div class="flex-grow-1 col-lg-4 col-md-12 col-sm-6 p-2 pt-0">
-                                    <p>Titulo: El Principito<br>Autor: De Saint Exupery Antoine</p>
-                                    <b>$3200</b>
-                                    <br>
-                                    <br>
-                                    <button type="button" class="btn btn-light">Ver más</button>
-                                </div>
+                            <div class="my-auto">
+                                <div class="d-flex row">
+                                    <div class="flex-shrink-0 col-lg-6 col-md-12 col-sm-5 px-0">
+                                        <img src="https://contentv2.tap-commerce.com/cover/large/9789876848039_1.jpg?id_com=1113" alt="..." style="max-height: 10rem;">
+                                    </div>
+                                    <div class="flex-grow-1 col-lg-4 col-md-12 col-sm-6 p-2 pt-0">
+                                        <p>Titulo: El Principito<br>Autor: De Saint Exupery Antoine</p>
+                                        <b>$3200</b>
+                                        <br>
+                                        <br>
+                                        <button type="button" class="btn btn-light">Ver más</button>
+                                    </div>
 
-                            </div>
-                            <br>
-                            <div class="d-flex row">
-                                <div class="flex-shrink-0 col-lg-6 col-md-12 col-sm-5 px-0">
-                                    <img src="https://contentv2.tap-commerce.com/cover/large/9789501296808_1.jpg?id_com=1113" alt="..." style="max-height: 10rem;">
                                 </div>
-                                <div class="flex-grow-1 col-lg-4 col-md-12 col-sm-6 p-2 pt-0">
-                                    <p>Titulo: Destroza este diario<br>Autor: Smith Keri</p>
-                                    <b>$3200</b>
-                                    <br>
-                                    <br>
-                                    <a href="detalles.html" type="button" class="btn btn-light">Ver más</a>
+                                <br>
+                                <div class="d-flex row">
+                                    <div class="flex-shrink-0 col-lg-6 col-md-12 col-sm-5 px-0">
+                                        <img src="https://contentv2.tap-commerce.com/cover/large/9789501296808_1.jpg?id_com=1113" alt="..." style="max-height: 10rem;">
+                                    </div>
+                                    <div class="flex-grow-1 col-lg-4 col-md-12 col-sm-6 p-2 pt-0">
+                                        <p>Titulo: Destroza este diario<br>Autor: Smith Keri</p>
+                                        <b>$3200</b>
+                                        <br>
+                                        <br>
+                                        <a href="detalles.html" type="button" class="btn btn-light">Ver más</a>
+                                    </div>
                                 </div>
-
+                                <br>
                             </div>
-                            <br>
                         </div>
                         <img src="https://www.bancodeserviciosfinancieros.com.ar/wp-content/uploads/2022/07/Banner-Rotativo-prestamos-mob.jpg?x14670 " alt="Publicidad " style="max-height: 30rem " class="img-fluid">
                     </aside>
